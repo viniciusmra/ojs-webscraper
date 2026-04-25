@@ -22,11 +22,11 @@ ATENÇÃO, a URL deve ser do arquivo da revista, por exemplo ```https://revistas
 O presente script funciona usando o conceito de web scraper, ou seja, ele extrai os dados da internet de forma automatizada.
 Para isso, são feitas requisições para a página da revista e a resposta (o código html da página) é então tratada usando a biblioteca ```beautifulsoup4```. 
 
-Nessa etapa são extraidas informações relacionadas ao nome, ano, quantidade de artigos publicados de cada edição (ou issue) e os dados de cada artigo. Isso tudo é salvo em um dicionário que posteriormente é transformado em um json. Enquanto extrai os dados, o script exibe no console algumas informações sobre as publicações e a quantidade de artigos.
+Nessa etapa são extraidas informações relacionadas ao nome, ano, quantidade de artigos publicados de cada edição (ou issue) e os dados de cada artigo, incluindo **citações bibliográficas**. Isso tudo é salvo em um dicionário que posteriormente é transformado em um arquivo YAML. Enquanto extrai os dados, o script exibe no console algumas informações sobre as publicações e a quantidade de artigos.
 
-Depois, o dicionário com todas as informações da revista é convertido em um arquivo .json, que eventualment pode ser carregado e transformado em dicionário novamente, para que o usuário não precise extrair todas as informações da revista.
+Depois, o dicionário com todas as informações da revista é convertido em um arquivo **.yml** (YAML), que é mais legível e organizado que JSON. O arquivo pode ser carregado posteriormente, para que o usuário não precise extrair todas as informações da revista novamente.
 
-Para organizar e catalogar os dados, uma planilha do tipo XLS é criada. Ela guarda todas essas informações de uma forma mais amigável, sem a necessidade do usuário final precisar consultar o arquvio .json.
+Para organizar e catalogar os dados, uma planilha do tipo XLS é criada. Ela guarda todas essas informações de uma forma mais amigável, com **uma linha para cada citação**, sem a necessidade do usuário final precisar consultar o arquivo .yml.
 
 Por fim, o script percorre o dicionário e baixa todos os arquivos da revista e os organiza em pastas.
 

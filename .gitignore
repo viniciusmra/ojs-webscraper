@@ -1,3 +1,12 @@
 venv/
 __pycache__/
 tempCodeRunnerFile.py
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.xls
+*.gif
+*.doc
+*.docx
+*.yml
